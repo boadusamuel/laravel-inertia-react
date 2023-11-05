@@ -1,4 +1,4 @@
-:root {
+:root body {
   --surface-a:#071426;
   --surface-b:#040d19;
   --surface-c:rgba(255, 255, 255, 0.03);
@@ -119,7 +119,7 @@
   }
 }
 
-:root {
+:root body {
   --blue-50:#f5f9ff;
   --blue-100:#d0e1fd;
   --blue-200:#abc9fb;

@@ -1,4 +1,4 @@
-"use client";
+ "use client";
 
 import { PrimeReactContext } from 'primereact/api';
 import { Button } from 'primereact/button';
@@ -36,9 +36,6 @@ const AppConfig = (props) => {
     };
 
     const _changeTheme = (theme, colorScheme) => {
-        console.log(theme)
-        console.log(colorScheme)
-        console.log(layoutConfig.theme)
         changeTheme?.(layoutConfig.theme, theme, 'theme-css', () => {
             setLayoutConfig((prevState) => ({ ...prevState, theme, colorScheme }));
         });
