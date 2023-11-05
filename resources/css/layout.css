@@ -292,7 +292,7 @@
 
 .p-autocomplete-items-wrapper {
     overflow: auto;
-} 
+}
 
 .p-avatar {
     display: inline-flex;
@@ -1132,7 +1132,7 @@
 }
 
 .p-datascroller .p-datascroller-list {
-    list-style-type: none; 
+    list-style-type: none;
     margin: 0;
     padding: 0;
 }
@@ -27348,7 +27348,7 @@ input.p-dropdown-label  {
 .pi-refresh:before {
     content: "\e938";
 }
-  
+
 .pi-user:before {
     content: "\e939";
 }
@@ -27648,106 +27648,142 @@ a {
   transition: box-shadow 0.2s;
   box-shadow: var(--focus-ring);
 }
+
 .layout-topbar .layout-topbar-button {
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-  color: var(--text-color-secondary);
-  border-radius: 50%;
-  width: 3rem;
-  height: 3rem;
-  cursor: pointer;
-  transition: background-color 0.2s;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    color: var(--text-color-secondary);
+    border-radius: 50%;
+    width: 3rem;
+    height: 3rem;
+    cursor: pointer;
+    transition: background-color 0.2s;
 }
 .layout-topbar .layout-topbar-button:hover {
-  color: var(--text-color);
-  background-color: var(--surface-hover);
+    color: var(--text-color);
+    background-color: var(--surface-hover);
 }
 .layout-topbar .layout-topbar-button:focus {
-  outline: 0 none;
-  outline-offset: 0;
-  transition: box-shadow 0.2s;
-  box-shadow: var(--focus-ring);
+    outline: 0 none;
+    outline-offset: 0;
+    transition: box-shadow 0.2s;
+    box-shadow: var(--focus-ring);
 }
 .layout-topbar .layout-topbar-button i {
-  font-size: 1.5rem;
+    font-size: 1.5rem;
 }
 .layout-topbar .layout-topbar-button span {
-  font-size: 1rem;
-  display: none;
+    font-size: 1rem;
+    display: none;
 }
 .layout-topbar .layout-menu-button {
-  margin-left: 2rem;
-}
-.layout-topbar .layout-topbar-menu-button {
-  display: none;
+    margin-left: 2rem;
 }
 .layout-topbar .layout-topbar-menu-button i {
-  font-size: 1.25rem;
-}
-.layout-topbar .layout-topbar-menu {
-  margin: 0 0 0 auto;
-  padding: 0;
-  list-style: none;
-  display: flex;
-}
-.layout-topbar .layout-topbar-menu .layout-topbar-button {
-  margin-left: 1rem;
+    font-size: 1.25rem;
 }
 
+/*@media (max-width: 991px) {*/
+
+    .layout-topbar .layout-topbar-menu-button {
+        margin: 0 0 0 auto;
+        padding: 0;
+        list-style: none;
+        display: flex;
+    }
+
+.layout-topbar .layout-topbar-menu {
+        margin-left: 0;
+        position: absolute;
+        flex-direction: column;
+        background-color: var(--surface-overlay);
+        box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.02), 0px 0px 2px rgba(0, 0, 0, 0.05), 0px 1px 4px rgba(0, 0, 0, 0.08);
+        border-radius: 12px;
+        padding: 1rem;
+        right: 2rem;
+        top: 5rem;
+        min-width: 15rem;
+        display: none;
+        animation: scalein 0.15s linear;
+    }
+    .layout-topbar .layout-topbar-menu.layout-topbar-menu-mobile-active {
+        display: block;
+    }
+    .layout-topbar .layout-topbar-menu .layout-topbar-button {
+        margin-left: 0;
+        display: flex;
+        width: 100%;
+        height: auto;
+        justify-content: flex-start;
+        border-radius: 12px;
+        padding: 1rem;
+    }
+    .layout-topbar .layout-topbar-menu .layout-topbar-button i {
+        font-size: 1rem;
+        margin-right: 0.5rem;
+    }
+    .layout-topbar .layout-topbar-menu .layout-topbar-button span {
+        font-weight: medium;
+        display: block;
+    }
+/*}*/
+
+
 @media (max-width: 991px) {
-  .layout-topbar {
-    justify-content: space-between;
-  }
-  .layout-topbar .layout-topbar-logo {
-    width: auto;
-    order: 2;
-  }
-  .layout-topbar .layout-menu-button {
-    margin-left: 0;
-    order: 1;
-  }
-  .layout-topbar .layout-topbar-menu-button {
-    display: inline-flex;
-    margin-left: 0;
-    order: 3;
-  }
-  .layout-topbar .layout-topbar-menu {
-    margin-left: 0;
-    position: absolute;
-    flex-direction: column;
-    background-color: var(--surface-overlay);
-    box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.02), 0px 0px 2px rgba(0, 0, 0, 0.05), 0px 1px 4px rgba(0, 0, 0, 0.08);
-    border-radius: 12px;
-    padding: 1rem;
-    right: 2rem;
-    top: 5rem;
-    min-width: 15rem;
-    display: none;
-    animation: scalein 0.15s linear;
-  }
-  .layout-topbar .layout-topbar-menu.layout-topbar-menu-mobile-active {
-    display: block;
-  }
-  .layout-topbar .layout-topbar-menu .layout-topbar-button {
-    margin-left: 0;
-    display: flex;
-    width: 100%;
-    height: auto;
-    justify-content: flex-start;
-    border-radius: 12px;
-    padding: 1rem;
-  }
-  .layout-topbar .layout-topbar-menu .layout-topbar-button i {
-    font-size: 1rem;
-    margin-right: 0.5rem;
-  }
-  .layout-topbar .layout-topbar-menu .layout-topbar-button span {
-    font-weight: medium;
-    display: block;
-  }
+    .layout-topbar {
+        justify-content: space-between;
+    }
+    .layout-topbar .layout-topbar-logo {
+        width: auto;
+        order: 2;
+    }
+    .layout-topbar .layout-menu-button {
+        margin-left: 0;
+        order: 1;
+    }
+    .layout-topbar .layout-topbar-menu-button {
+        display: inline-flex;
+        margin-left: 0;
+        order: 3;
+    }
+    .layout-topbar .layout-topbar-menu {
+        margin-left: 0;
+        position: absolute;
+        flex-direction: column;
+        background-color: var(--surface-overlay);
+        box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.02), 0px 0px 2px rgba(0, 0, 0, 0.05), 0px 1px 4px rgba(0, 0, 0, 0.08);
+        border-radius: 12px;
+        padding: 1rem;
+        right: 2rem;
+        top: 5rem;
+        min-width: 15rem;
+        display: none;
+        animation: scalein 0.15s linear;
+    }
+    .layout-topbar .layout-topbar-menu.layout-topbar-menu-mobile-active {
+        display: block;
+    }
+    .layout-topbar .layout-topbar-menu .layout-topbar-button {
+        margin-left: 0;
+        display: flex;
+        width: 100%;
+        height: auto;
+        justify-content: flex-start;
+        border-radius: 12px;
+        padding: 1rem;
+    }
+    .layout-topbar .layout-topbar-menu .layout-topbar-button i {
+        font-size: 1rem;
+        margin-right: 0.5rem;
+    }
+    .layout-topbar .layout-topbar-menu .layout-topbar-button span {
+        font-weight: medium;
+        display: block;
+    }
 }
+
 .layout-sidebar {
   position: fixed;
   width: 300px;

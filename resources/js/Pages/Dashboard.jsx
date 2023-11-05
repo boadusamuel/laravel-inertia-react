@@ -9,7 +9,7 @@ import React from "react";
 export default function Dashboard({ auth }) {
     return (
         <Layout>
-            <div></div>
+            <div className="card">Hello Dashboard</div>
         </Layout>
     );
 
