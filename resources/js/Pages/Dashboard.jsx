@@ -1,13 +1,10 @@
-/* eslint-disable @next/next/no-img-element */
-'use client';
 import {Button} from 'primereact/button';
 import {Chart} from 'primereact/chart';
-import {Column} from 'primereact/column';
-import {DataTable} from 'primereact/datatable';
 import {Menu} from 'primereact/menu';
 import React, {useContext, useEffect, useRef, useState} from 'react';
 import {LayoutContext} from '@/Layouts/layout/context/layoutcontext';
 import Layout from "@/Layouts/layout/layout.jsx";
+import DashboardInfoCard from "@/Components/DashboardInfoCard.jsx";
 
 const lineData = {
     labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
@@ -103,10 +100,6 @@ const Dashboard = () => {
     };
 
     useEffect(() => {
-        // ProductService.getProductsSmall().then((data) => setProducts(data));
-    }, []);
-
-    useEffect(() => {
         if (layoutConfig.colorScheme === 'light') {
             applyLightTheme();
         } else {
@@ -114,80 +107,35 @@ const Dashboard = () => {
         }
     }, [layoutConfig.colorScheme]);
 
-    const formatCurrency = (value) => {
-        return value?.toLocaleString('en-US', {
-            style: 'currency',
-            currency: 'GHS'
-        });
-    };
-
     return (
         <Layout>
             <div className="grid">
-                <div className="col-12 lg:col-6 xl:col-3">
-                    <div className="card mb-0">
-                        <div className="flex justify-content-between mb-3">
-                            <div>
-                                <span className="block text-500 font-medium mb-3">Orders</span>
-                                <div className="text-900 font-medium text-xl">152</div>
-                            </div>
-                            <div className="flex align-items-center justify-content-center bg-blue-100 border-round"
-                                 style={{width: '2.5rem', height: '2.5rem'}}>
-                                <i className="pi pi-shopping-cart text-blue-500 text-xl"/>
-                            </div>
-                        </div>
-                        <span className="text-green-500 font-medium">24 new </span>
-                        <span className="text-500">since last visit</span>
-                    </div>
-                </div>
-                <div className="col-12 lg:col-6 xl:col-3">
-                    <div className="card mb-0">
-                        <div className="flex justify-content-between mb-3">
-                            <div>
-                                <span className="block text-500 font-medium mb-3">Revenue</span>
-                                <div className="text-900 font-medium text-xl">GHS 2.100</div>
-                            </div>
-                            <div className="flex align-items-center justify-content-center bg-orange-100 border-round"
-                                 style={{width: '2.5rem', height: '2.5rem'}}>
-                                <i className="pi pi-map-marker text-orange-500 text-xl"/>
-                            </div>
-                        </div>
-                        <span className="text-green-500 font-medium">%52+ </span>
-                        <span className="text-500">since last week</span>
-                    </div>
-                </div>
-                <div className="col-12 lg:col-6 xl:col-3">
-                    <div className="card mb-0">
-                        <div className="flex justify-content-between mb-3">
-                            <div>
-                                <span className="block text-500 font-medium mb-3">Customers</span>
-                                <div className="text-900 font-medium text-xl">28441</div>
-                            </div>
-                            <div className="flex align-items-center justify-content-center bg-cyan-100 border-round"
-                                 style={{width: '2.5rem', height: '2.5rem'}}>
-                                <i className="pi pi-inbox text-cyan-500 text-xl"/>
-                            </div>
-                        </div>
-                        <span className="text-green-500 font-medium">520 </span>
-                        <span className="text-500">newly registered</span>
-                    </div>
-                </div>
-                <div className="col-12 lg:col-6 xl:col-3">
-                    <div className="card mb-0">
-                        <div className="flex justify-content-between mb-3">
-                            <div>
-                                <span className="block text-500 font-medium mb-3">Comments</span>
-                                <div className="text-900 font-medium text-xl">152 Unread</div>
-                            </div>
-                            <div className="flex align-items-center justify-content-center bg-purple-100 border-round"
-                                 style={{width: '2.5rem', height: '2.5rem'}}>
-                                <i className="pi pi-comment text-purple-500 text-xl"/>
-                            </div>
-                        </div>
-                        <span className="text-green-500 font-medium">85 </span>
-                        <span className="text-500">responded</span>
-                    </div>
-                </div>
+                <DashboardInfoCard title="Orders"
+                                   value="152"
+                                   icon="map-marker"
+                                   iconColor="blue"
+                                   descriptionValue="24 new"
+                                   descriptionText="since last visit">
+                </DashboardInfoCard>
+                <DashboardInfoCard title="Revenue"
+                                   value="GHS 2.100"
+                                   icon="map-marker"
+                                   iconColor="orange"
+                                   descriptionValue="%52+"
+                                   descriptionText="since last week">
+                </DashboardInfoCard>
+                <DashboardInfoCard title="Customers" value="28441"
+                                   descriptionValue="520"
+                                   icon="inbox"
+                                   iconColor="cyan"
+                                   descriptionText="since last week">
+                </DashboardInfoCard>
+                <DashboardInfoCard title="Comments" value="152 Unread"
+                                   descriptionValue="85"
+                                   icon="comment"
+                                   iconColor="purple"
+                                   descriptionText="responded">
+                </DashboardInfoCard>
 
                 <div className="col-12 xl:col-6">
                     <div className="card">
@@ -264,32 +212,6 @@ const Dashboard = () => {
                                         <div className="bg-green-500 h-full" style={{width: '35%'}}/>
                                     </div>
                                     <span className="text-green-500 ml-3 font-medium">%35</span>
-                                </div>
-                            </li>
-                            <li className="flex flex-column md:flex-row md:align-items-center md:justify-content-between mb-4">
-                                <div>
-                                    <span className="text-900 font-medium mr-2 mb-1 md:mb-0">Mat Black Case</span>
-                                    <div className="mt-1 text-600">Accessories</div>
-                                </div>
-                                <div className="mt-2 md:mt-0 ml-0 md:ml-8 flex align-items-center">
-                                    <div className="surface-300 border-round overflow-hidden w-10rem lg:w-6rem"
-                                         style={{height: '8px'}}>
-                                        <div className="bg-purple-500 h-full" style={{width: '75%'}}/>
-                                    </div>
-                                    <span className="text-purple-500 ml-3 font-medium">%75</span>
-                                </div>
-                            </li>
-                            <li className="flex flex-column md:flex-row md:align-items-center md:justify-content-between mb-4">
-                                <div>
-                                    <span className="text-900 font-medium mr-2 mb-1 md:mb-0">Robots T-Shirt</span>
-                                    <div className="mt-1 text-600">Clothing</div>
-                                </div>
-                                <div className="mt-2 md:mt-0 ml-0 md:ml-8 flex align-items-center">
-                                    <div className="surface-300 border-round overflow-hidden w-10rem lg:w-6rem"
-                                         style={{height: '8px'}}>
-                                        <div className="bg-teal-500 h-full" style={{width: '40%'}}/>
-                                    </div>
-                                    <span className="text-teal-500 ml-3 font-medium">%40</span>
                                 </div>
                             </li>
                         </ul>
