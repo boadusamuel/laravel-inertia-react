@@ -1,5 +1,5 @@
 <p align="center">
-  <a href="https://your-dashboard-website.com" target="_blank"><img src="https://drive.google.com/file/d/1QoqlcyEFtkE_-W1bpOB0rc1KTj5mq0_j/view?usp=sharing" width="400" alt="LaraReact"></a>
+  <a href="#"><img src="https://dev-to-uploads.s3.amazonaws.com/uploads/articles/57ge2v8fp17lcd8vmf1a.png" width="400" alt="LaraReact"></a>
 </p>
 
 ## About LaraReact Dashboard Template (Laravel 10)
