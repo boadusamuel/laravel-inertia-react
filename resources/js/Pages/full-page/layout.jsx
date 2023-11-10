@@ -1,15 +1,14 @@
-import AppConfig from '../../layout/AppConfig';
+
 import React from 'react';
+import AppConfig from "@/Layouts/layout/AppConfig.jsx";
 
-interface SimpleLayoutProps {
-    children: React.ReactNode;
-}
 
-export default function SimpleLayout({ children }: SimpleLayoutProps) {
+
+export default function SimpleLayout({ children }) {
     return (
         <React.Fragment>
             {children}
-            <AppConfig simple />
+            <AppConfig />
         </React.Fragment>
     );
 }
