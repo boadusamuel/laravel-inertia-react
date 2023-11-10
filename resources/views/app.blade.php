@@ -16,7 +16,7 @@
         @vite(['resources/js/app.jsx', "resources/js/Pages/{$page['component']}.jsx"])
         @inertiaHead
 
-        <link id="theme-css" href={{asset('/themes/lara-light-indigo/theme.css')}} rel="stylesheet"></link>
+        <link id="theme-css" href={{asset('/themes/tailwind-light/theme.css')}} rel="stylesheet"></link>
     </head>
     <body class="font-sans antialiased">
         @inertia
