@@ -39,10 +39,10 @@ export default function Login({status, canResetPassword}) {
             {status && <div className="mb-4 font-medium text-sm text-green-600">{status}</div>}
 
 
-            <div className="flex align-items-center justify-content-center">
-                <div className="surface-card p-4 shadow-2 border-round w-full lg:w-4">
+            <div className="flex align-items-center justify-content-center flex-column">
+                <img src="/images/logo/-dark.svg" alt="hyper" height={50} className="mb-3"/>
+                <div className="surface-card p-6 sm:p-4 shadow-2 border-round w-full lg:w-4">
                     <div className="text-center mb-5">
-                        <img src="/images/logo/-dark.svg" alt="hyper" height={50} className="mb-3"/>
                         <div className="text-900 text-3xl font-medium mb-3">Welcome Back</div>
                         <span className="text-600 font-medium line-height-3">Don't have an account?</span>
                         <Link  href={route('register')} className="font-medium no-underline ml-2 text-blue-500 cursor-pointer">Create today!</Link>
@@ -76,10 +76,10 @@ export default function Login({status, canResetPassword}) {
 
                             <div className="flex align-items-center justify-content-between mb-6">
                                 <div className="flex align-items-center">
-                                    <Checkbox id="rememberme"
+                                    <Checkbox inputId="rememberme-login"
                                               onChange={(e) => setData('remember', e.target.checked)}
                                               checked={data.remember} className="mr-2"/>
-                                    <label htmlFor="rememberme">Remember me</label>
+                                    <label htmlFor="rememberme-login">Remember me</label>
                                 </div>
 
                                 {canResetPassword && (
