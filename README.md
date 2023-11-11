@@ -4,7 +4,7 @@
 
 ## About LaraReact Dashboard Template (Laravel 10)
 
-LaraReact Dashboard Template is a Laravel 10 Inertia and React-based web application template designed for creating modern and interactive dashboard applications. This template provides you with a solid foundation for building powerful web applications with features such as:
+LaraReact Dashboard Template is a Laravel Inertia and React-based web application template designed with inspiration from [Sakai PrimeReact](https://sakai.primereact.org/) for creating modern and interactive dashboard applications. This template provides you with a solid foundation for building powerful web applications with features such as:
 
 - [Laravel-based backend](https://laravel.com)
 - [Inertia.js](https://inertiajs.com) for seamless SPA development

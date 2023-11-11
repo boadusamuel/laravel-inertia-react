@@ -1,4 +1,3 @@
-'use client';
 import { Ripple } from 'primereact/ripple';
 import { classNames } from 'primereact/utils';
 import React, { useEffect, useContext } from 'react';
@@ -8,8 +7,8 @@ import {Link} from "@inertiajs/react";
 
 
 const AppMenuitem = (props) => {
-    const pathname = route().current();
-    const searchParams = 'test';
+    const pathname = route(route().current());
+    const searchParams = '';
     const { activeMenu, setActiveMenu } = useContext(MenuContext);
     const item = props.item;
     const key = props.parentKey ? props.parentKey + '-' + props.index : String(props.index);

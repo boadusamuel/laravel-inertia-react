@@ -40,7 +40,7 @@ Route::middleware('auth')->group(function () {
 
 Route::get('/uikit/button', function () {
     return Inertia::render('main/uikit/button/page');
-})->name('main');
+})->name('button');
 
 
 

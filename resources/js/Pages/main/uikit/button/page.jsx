@@ -1,4 +1,3 @@
-'use client';
 import React, { useState } from 'react';
 import { SplitButton } from 'primereact/splitbutton';
 import { Button } from 'primereact/button';
