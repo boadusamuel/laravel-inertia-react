@@ -1,4 +1,3 @@
-'use client'
 import React, { useState, createContext } from 'react';
 
 export const LayoutContext = createContext({});

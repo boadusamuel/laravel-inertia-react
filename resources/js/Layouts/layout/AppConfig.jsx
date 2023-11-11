@@ -1,5 +1,3 @@
-"use client";
-
 import {PrimeReactContext} from 'primereact/api';
 import {Button} from 'primereact/button';
 import {InputSwitch} from 'primereact/inputswitch';
