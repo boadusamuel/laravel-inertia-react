@@ -13,7 +13,6 @@ const AppMenu = () => {
             items: [
                 { label: 'Dashboard', icon: 'pi pi-fw pi-home', to: route('dashboard') },
                 { label: 'Button', icon: 'pi pi-fw pi-id-card', to: route('main') },
-                { label: 'Login', icon: 'pi pi-fw pi-mobile', to: route('test'), class: 'rotated-icon' },
             ]
         },
     ];

@@ -42,9 +42,6 @@ Route::get('/uikit/button', function () {
     return Inertia::render('main/uikit/button/page');
 })->name('main');
 
-Route::get('/test', function () {
-    return Inertia::render('full-page/auth/login/page');
-})->name('test');
 
 
 
