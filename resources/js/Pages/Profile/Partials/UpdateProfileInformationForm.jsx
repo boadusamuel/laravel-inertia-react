@@ -1,9 +1,8 @@
 import InputError from '@/Components/InputError';
-import InputLabel from '@/Components/InputLabel';
 import PrimaryButton from '@/Components/PrimaryButton';
-import TextInput from '@/Components/TextInput';
 import { Link, useForm, usePage } from '@inertiajs/react';
 import { Transition } from '@headlessui/react';
+import {InputText} from "primereact/inputtext";
 
 export default function UpdateProfileInformation({ mustVerifyEmail, status, className = '' }) {
     const user = usePage().props.auth.user;
@@ -22,44 +21,38 @@ export default function UpdateProfileInformation({ mustVerifyEmail, status, clas
     return (
         <section className={className}>
             <header>
-                <h2 className="text-lg font-medium text-gray-900">Profile Information</h2>
+                <h2 className="text-lg font-medium">Profile Information</h2>
 
                 <p className="mt-1 text-sm text-gray-600">
                     Update your account's profile information and email address.
                 </p>
             </header>
 
-            <form onSubmit={submit} className="mt-6 space-y-6">
-                <div>
-                    <InputLabel htmlFor="name" value="Name" />
-
-                    <TextInput
+            <form onSubmit={submit} className="mt-4 space-y-6">
+                <div className="mb-3">
+                    <label htmlFor="name" className="block text-900 font-medium mb-2">Name</label>
+                    <InputText
                         id="name"
-                        className="mt-1 block w-full"
+                        type="text"
+                        placeholder="Name"
+                        className="w-full"
                         value={data.name}
                         onChange={(e) => setData('name', e.target.value)}
-                        required
-                        isFocused
-                        autoComplete="name"
                     />
-
-                    <InputError className="mt-2" message={errors.name} />
+                    <InputError message={errors.email} className=""/>
                 </div>
 
-                <div>
-                    <InputLabel htmlFor="email" value="Email" />
-
-                    <TextInput
+                <div className="mb-3">
+                    <label htmlFor="email" className="block text-900 font-medium mb-2">Email</label>
+                    <InputText
                         id="email"
-                        type="email"
-                        className="mt-1 block w-full"
+                        type="text"
+                        placeholder="Email address"
+                        className="w-full"
                         value={data.email}
                         onChange={(e) => setData('email', e.target.value)}
-                        required
-                        autoComplete="username"
                     />
-
-                    <InputError className="mt-2" message={errors.email} />
+                    <InputError message={errors.email} className=""/>
                 </div>
 
                 {mustVerifyEmail && user.email_verified_at === null && (

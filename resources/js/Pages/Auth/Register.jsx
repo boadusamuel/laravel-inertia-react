@@ -42,7 +42,7 @@ export default function Register() {
                     <form onSubmit={submit}>
                         <div>
                                 <div className="mb-3">
-                                    <label htmlFor="email" className="block text-900 font-medium mb-2">Name</label>
+                                    <label htmlFor="name" className="block text-900 font-medium mb-2">Name</label>
                                     <InputText
                                         id="name"
                                         type="text"
