@@ -37,12 +37,12 @@ const Layout = ({ children }) => {
             },
         });
 
-    // const pathname = route().current();
+    const pathname = route().current();
     // const searchParams = useSearchParams();
-    // useEffect(() => {
-    //     hideMenu();
-    //     hideProfileMenu();
-    // }, [pathname, searchParams]);
+    useEffect(() => {
+        hideMenu();
+        hideProfileMenu();
+    }, [pathname]);
 
     const [
         bindProfileMenuOutsideClickListener,
