@@ -92,7 +92,7 @@ export default function Login({status, canResetPassword}) {
                                 )}
                             </div>
 
-                            <Button label="Sign In" className="w-full" disabled={processing}/>
+                            <PrimaryButton label="Sign In" className="w-full" disabled={processing}/>
                         </div>
                     </form>
                 </div>
