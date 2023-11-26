@@ -101,7 +101,7 @@ export default function Register() {
 
                             </div>
 
-                            <Button label="Register" className="w-full" disabled={processing}/>
+                            <PrimaryButton label="Register" className="w-full" disabled={processing}/>
                         </div>
                     </form>
                 </div>
