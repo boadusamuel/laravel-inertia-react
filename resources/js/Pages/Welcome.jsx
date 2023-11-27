@@ -50,7 +50,7 @@ export default function Welcome({ auth, laravelVersion, phpVersion }) {
                         <section>
                             <span className="block text-6xl font-bold mb-1">Create the dashboard</span>
                             <div className="text-6xl text-primary font-bold mb-3">your clients deserve to see</div>
-                            <p className="mt-0 mb-4 text-700 line-height-3">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                            <p className="mt-0 mb-4 text-700 line-height-3">Craft a visually stunning and user-centric dashboard that showcases the information your clients deserve with bold, impactful design elements.</p>
 
                             <Button label="Learn More" type="button" className="mr-3 p-button-raised" />
                             <Button label="Live Demo" type="button" className="p-button-outlined" />
