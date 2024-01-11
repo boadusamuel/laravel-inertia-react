@@ -1,5 +1,5 @@
 {
-    "name": "Dashboard/Template",
+    "name": "dashboard/template",
     "type": "project",
     "description": "The free inertia react dashboard template",
     "keywords": ["laravel", "framework", "inertia", "dashboard", "template"],
